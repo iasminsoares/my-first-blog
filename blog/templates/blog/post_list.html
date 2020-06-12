@@ -17,7 +17,7 @@
         	<p>{{ post.text|linebreaksbr }}</p>
     	</div>
 
-'	{% endfor %}
+	{% endfor %}
 <!--
 	Tudo o que você colocar entre {% for %} e {% endfor %} será repetido para cada objeto na lista.
 	Você notou que dessa vez nós usamos uma notação um pouco diferente ({{ post.title }} ou {{ post.text }})? Estamos acessando os dados em cada um dos campos que definimos no modelo do Post. Além disso, |linebreaks está passando o texto do post por um filtro, convertendo quebras de linha em parágrafos.
