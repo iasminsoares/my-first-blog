@@ -7,6 +7,28 @@
 	<div>
 		<h1><a href="/">Blog Django Girls</a></h1>
 	</div>
+	<!--
+		Pra mostrar uma variável em um template do Django, usamos chaves duplas com o nome da variável, assim: {{ posts }}
+	-->
+	{% for post in posts %}
+    	<div>
+       		<p>published: {{ post.published_date }}</p>
+        	<h2><a href="">{{ post.title }}</a></h2>
+        	<p>{{ post.text|linebreaksbr }}</p>
+    	</div>
+
+'	{% endfor %}
+<!--
+	Tudo o que você colocar entre {% for %} e {% endfor %} será repetido para cada objeto na lista.
+	Você notou que dessa vez nós usamos uma notação um pouco diferente ({{ post.title }} ou {{ post.text }})? Estamos acessando os dados em cada um dos campos que definimos no modelo do Post. Além disso, |linebreaks está passando o texto do post por um filtro, convertendo quebras de linha em parágrafos.
+-->
+	
+
+
+
+
+	<!--
+
 
 	<div>
 		<p>publicado: 11.06.2020, 12:14</p>
@@ -23,6 +45,6 @@
 		<p>
 			 Foi muito difícil chegar até aqui. Depois de uma semana estudando e seguindo os passos do tutorial do DjangoGirls, de errar muito, de ficar com preguiça e quase desistir. No entanto, sempre que essas sensações apareciam, eu dava um tempo pra respirar, colocar minha mente no lugar, depois voltava e conseguia finalizar a etapa. É incrível a sensação!
 		</p>
-	</div>
+	</div> -->
 </body>
 </html>
