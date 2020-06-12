@@ -12,24 +12,15 @@
 	-->
 	{% for post in posts %}
     	<div>
-       		<p>published: {{ post.published_date }}</p>
+        	<p>published: {{ post.published_date }}</p>
         	<h2><a href="">{{ post.title }}</a></h2>
-        	<p>{{ post.text|linebreaksbr }}</p>
+       		<p>{{ post.text|linebreaksbr }}</p>
     	</div>
-
 	{% endfor %}
-<!--
-	Tudo o que você colocar entre {% for %} e {% endfor %} será repetido para cada objeto na lista.
-	Você notou que dessa vez nós usamos uma notação um pouco diferente ({{ post.title }} ou {{ post.text }})? Estamos acessando os dados em cada um dos campos que definimos no modelo do Post. Além disso, |linebreaks está passando o texto do post por um filtro, convertendo quebras de linha em parágrafos.
--->
-	
-
-
-
-
 	<!--
-
-
+		Você notou que dessa vez nós usamos uma notação um pouco diferente ({{ post.title }} ou {{ post.text }})? Estamos acessando os dados em cada um dos campos que definimos no modelo do Post. Além disso, |linebreaks está passando o texto do post por um filtro, convertendo quebras de linha em parágrafos.
+	-->
+	<!--
 	<div>
 		<p>publicado: 11.06.2020, 12:14</p>
 		<h2><a href="#">O primeiro, nunca esquecemos!</a></h2>
