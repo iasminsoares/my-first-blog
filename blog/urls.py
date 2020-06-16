@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.post_list, name='post_list'),
+    path('post/<int:pk>/', views.post_detail, name='post_detail'), #especifica um padrão de URL
 ]
 	#estamos agora atribuindo uma view chamada post_list à URL raiz
 	#A última parte, name='post_list', é o nome da URL que será usado para identificar a view.
