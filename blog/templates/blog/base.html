@@ -10,6 +10,12 @@
     <body>
        <body>
     <div class="page-header">
+         <!--
+        Note que queremos chamar nossa nova view de post_new. A classe "glyphicon glyphicon-plus" é fornecida pelo tema (bootstrap) que estamos usando, e nos mostrará um sinal de mais.
+        -->
+        {% if user.is_authenticated %} <!--irá apresentar o link somente para os usuários que estiverem logados como admin-->
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        {% endif %}
         <h1><a href="/">Django Girls Blog</a></h1>
     </div>
     <div class="content container">

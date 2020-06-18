@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h2>New post</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}
+
+<!--Temos que exibir o formulário. Podemos fazer isso com (por exemplo) {{ form.as_p }}.
+A linha acima precisa estar dentro de uma tag HTML form: <form method="POST">...</form>.
+Precisamos de um botão Salvar. Fazemos isso com um botão HTML: <button type="submit">Save</button>.
+E finalmente, depois de abrir a tag <form ...>, precisamos adicionar {% csrf_token %}. Isso é muito importante, pois é isso que torna o nosso formulário seguro! Se você esquecer esta parte, o Django vai reclamar quando você tentar salvar o formulário link: http://127.0.0.1:8000/post/new/ -->
